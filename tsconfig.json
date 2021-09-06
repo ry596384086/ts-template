@@ -14,9 +14,13 @@
     "noUnusedLocals": false,   // true: 如果有未使用的块级变量，编译器会报错。
     "noUnusedParameters": false,   // true: 如果有未使用的参数，编译器会报错。鉴于js的动态性，这个我一般关掉
     "removeComments": false,   // 删除注释，debug的时候不开启
-    "preserveConstEnums": false,   // 见下文 
+    "preserveConstEnums": false,   // 见下文
     "skipLibCheck": false,    // 跳过lib文件的静态检查，哎，不是所有的lib都给你写得规规整整的。
     "experimentalDecorators": true,   // 要实用装饰器语法的话，打开该项
+    "typeRoots":[
+      "node_modules/@types",
+      "src/types"
+    ],
     "paths": {
       "@/*": ["src/*"]
   }
@@ -25,7 +29,7 @@
     "src/**/*"
   ],
   "exclude": ["dist", "node_modules"]  //编译时排除 dist、node_modules文件夹
-  // "files": [   
+  // "files": [
   //   "./types/index.d.ts",
   //   "./types/polyfill.d.ts"
   // ]
