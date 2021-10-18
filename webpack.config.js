@@ -65,10 +65,6 @@ module.exports = {
         use: [
           "babel-loader",
           "ts-loader",
-          {
-            loader: "eslint-loader",
-            options: { fix: true },
-          },
         ],
         include: path.resolve(__dirname, "src"),
         exclude: /node_modules/,
