@@ -5,11 +5,7 @@ module.exports = {
     es6: true, //启用除了modules以外的所有ES6特性（该选项会自动设置 ecmaVersion 解析器选项为 6）
     node: true //Node.js 全局变量和 Node.js 作用域
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:prettier/recommended'
-  ],
+  extends: ['eslint:recommended', 'plugin:react/recommended'],
   // 设置全局变量
   globals: {},
   // 指定解析器
@@ -24,18 +20,8 @@ module.exports = {
     sourceType: 'module'
   },
   // 第三方插件
-  plugins: ['react', 'prettier'],
+  plugins: ['react'],
   rules: {
-    'prettier/prettier': [
-      'error',
-      {
-        singleQuote: true,
-        parser: 'flow',
-        tabWidth: 2,
-        trailingComma: 'none',
-        semi: false
-      }
-    ],
     semi: 0,
     'no-unused-vars': 1,
     'no-useless-escape': 2,
