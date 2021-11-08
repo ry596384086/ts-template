@@ -17,10 +17,10 @@
     "preserveConstEnums": false,   // 见下文
     "skipLibCheck": false,    // 跳过lib文件的静态检查，哎，不是所有的lib都给你写得规规整整的。
     "experimentalDecorators": true,   // 要实用装饰器语法的话，打开该项
-    "typeRoots":[
-      "node_modules/@types",
-      "src/types"
-    ],
+    // "typeRoots":[
+    //   "node_modules/@types",
+    //   "src/types"
+    // ],
     "paths": {
       "@/*": ["src/*"]
   }
