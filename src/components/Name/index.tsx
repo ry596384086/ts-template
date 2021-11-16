@@ -8,6 +8,7 @@ const Name: FC = () => {
   return (
     <div>
       <p>name: {name}</p>
+      bu
     </div>
   )
 }

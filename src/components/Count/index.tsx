@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import { observer } from 'mobx-react'
 import { useStore1 } from '@/store/'
+import './index.less'
 
 // 类组件用装饰器注入，方法如下
 // @inject('store1')
@@ -10,7 +11,9 @@ const Count: FC = () => {
   const { count, addCount } = useStore1()
   return (
     <div>
-      <p>count: {count}</p>
+      <p key={count} id="wordAnimation">
+        count: {count}
+      </p>
       <button onClick={addCount}>addCount</button>
     </div>
   )
