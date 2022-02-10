@@ -1,8 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const SimpleProgressWebpackPlugin = require('simple-progress-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const autoprefixer = require('autoprefixer')
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 
 // 生产环境才抽离css文件，避免开发环境下修改css后热更新不加载问题
 getStyleLoader = () => {
@@ -14,14 +13,28 @@ module.exports = {
 
   entry: './src/index.tsx',
 
+  stats: 'errors-only',
+
   plugins: [
     new HtmlWebpackPlugin({
       template: 'public/index.html'
     }),
-    new SimpleProgressWebpackPlugin(),
     // new BundleAnalyzerPlugin({analyzerPort: 8080, generateStatsFile: false  })
     new MiniCssExtractPlugin({
       filename: 'css/[name]-[contenthash].css'
+    }),
+    // new ProgressBarPlugin(),
+    new FriendlyErrorsWebpackPlugin({
+      compilationSuccessInfo: {
+        messages: [`You application is running here http://localhost:8080`]
+      },
+      onErrors: function (severity, errors) {
+        // You can listen to errors transformed and prioritized by the plugin
+        // severity can be 'error' or 'warning'
+      },
+      // should the console be cleared between each compilation?
+      // default is true
+      clearConsole: true
     })
   ],
 

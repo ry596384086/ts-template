@@ -4,7 +4,7 @@
   "private": "true",
   "license": "MIT",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack serve",
+    "start": "cross-env NODE_ENV=development webpack serve --progress",
     "build": "cross-env NODE_ENV=production webpack --profile",
     "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx src"
   },
@@ -35,7 +35,6 @@
     "postcss-loader": "^6.1.1",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.3.2",
-    "simple-progress-webpack-plugin": "^2.0.0",
     "style-loader": "^3.2.1",
     "ts-loader": "^9.2.5",
     "webpack": "^5.51.1",
@@ -44,6 +43,7 @@
     "webpack-dev-server": "^4.1.0"
   },
   "dependencies": {
+    "friendly-errors-webpack-plugin": "^1.7.0",
     "lodash": "^4.17.21",
     "mobx-react": "^7.2.1",
     "react": "^17.0.2",
