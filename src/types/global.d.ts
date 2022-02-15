@@ -1,6 +1,29 @@
-/**
- * 获取用户Name
- *
- * @param id 用户id
- */
-declare function getName(id: number | string): string
+declare module '*.css' {
+  const classes: { readonly [key: string]: string };
+  export default classes;
+}
+
+declare module '*.less' {
+  const classes: { readonly [key: string]: string };
+  export default classes;
+}
+
+declare module '*.png' {
+  const path: string;
+  export default path;
+}
+
+declare module '*.jpg' {
+  const path: string;
+  export default path;
+}
+
+declare module '*.svg' {
+  const path: string;
+  export default path;
+}
+
+declare module '*.cur' {
+  const path: string;
+  export default path;
+}
